@@ -1,47 +1,34 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Biodata</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <div class="mx-auto"></div>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><router-link to="/home" style="color: black;">Home</router-link></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><router-link to="/fyi" style="color: black;">Fyi</router-link></a>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+    <h3 class = "title-navbar"> Profile </h3>
+    <ul class = "nav-link">
+      <li><router-link to="/home" style="color: black"> Home </router-link></li>
+      <li><router-link to="/fyi" style="color: black"> About </router-link></li>
+      <li><router-link to="/portofolio" style="color: black"> Moment </router-link></li>
+    </ul>
   </nav>
-
-
-
+  <hr>
+  <router-view/>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-import home from "@/views/home.vue";
 export default {
   name: 'App',
   components: {
-    // HelloWorld
-    home
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #000000;
-  margin-top: 80px;
+h3 {
+  font-family: "Lucida Bright";
+  padding-left: 30px;
+}
+li {
+  font-family: "Lucida Bright";
+  list-style: none;
+  float: left;
+  padding: 23px 30px;
+  font-size: 20px;
 }
 </style>
